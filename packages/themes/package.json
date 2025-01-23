@@ -4,14 +4,18 @@
   "type": "module",
   "main": "dist/index.js",
   "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./themes.css": "./dist/themes.css"
   },
   "scripts": {
-    "build": "npm run clear && npm run build:type && npm run build:js",
+    "build": "npm run clear && npm run build:js && npm run build:type && npm run build:css",
     "build:js": "node build.js",
     "build:type": "tsc --emitDeclarationOnly",
+    "build:css": "node ./scripts/build-css-module.js",
     "clear": "rmdir /s /q  dist"
   },
   "devDependencies": {
