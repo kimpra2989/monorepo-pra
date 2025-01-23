@@ -22,28 +22,39 @@ const baseConfig = {
   external,
 }
 
-Promise.all([
-  esbuild.context({
-    ...baseConfig,
-    format: 'esm',
-  }),
-  esbuild.context({
-    ...baseConfig,
-    format: 'cjs',
-    outExtension: {
-      '.js': '.cjs',
-    },
-  }),
-])
-  .then(async (ctxs) => {
-    console.log('build success')
+async function build() {
+  try {
+    const ctxs = await Promise.all([
+      esbuild.context({
+        ...baseConfig,
+        format: 'esm',
+      }),
+      esbuild.context({
+        ...baseConfig,
+        format: 'cjs',
+        outExtension: {
+          '.js': '.cjs',
+        },
+      }),
+    ])
 
     if (watch) {
       await Promise.all(ctxs.map((ctx) => ctx.watch()))
       console.log('watching')
+      return
     }
-  })
-  .catch((e) => {
+
+    await Promise.all(
+      ctxs.map(async (ctx) => {
+        await ctx.rebuild()
+        ctx.dispose()
+      })
+    )
+    console.log('build success')
+  } catch (e) {
     console.error('Build failed', e)
     process.exit(1)
-  })
+  }
+}
+
+build()
