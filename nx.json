@@ -1,0 +1,18 @@
+{
+  "npmScope": "workspace",
+  "defaultBase": "main",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build"]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  },
+  "extends": "nx/presets/npm.json"
+}
