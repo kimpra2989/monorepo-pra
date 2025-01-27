@@ -16,7 +16,7 @@
     "build:js": "node build.js",
     "build:type": "tsc --emitDeclarationOnly",
     "build:css": "node ./scripts/build-css-module.js",
-    "clear": "rmdir /s /q  dist"
+    "clear": "rimraf  dist"
   },
   "devDependencies": {
     "esbuild": "^0.24.2"
