@@ -320,11 +320,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fc/esbuild-config@workspace:^, @fc/esbuild-config@workspace:packages/esbuild-config":
+  version: 0.0.0-use.local
+  resolution: "@fc/esbuild-config@workspace:packages/esbuild-config"
+  dependencies:
+    esbuild: "npm:^0.24.2"
+  languageName: unknown
+  linkType: soft
+
 "@fc/themes@workspace:^, @fc/themes@workspace:packages/themes":
   version: 0.0.0-use.local
   resolution: "@fc/themes@workspace:packages/themes"
   dependencies:
-    esbuild: "npm:^0.24.2"
+    "@fc/esbuild-config": "workspace:^"
   languageName: unknown
   linkType: soft
 
