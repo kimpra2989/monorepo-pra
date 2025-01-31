@@ -1,3 +1,5 @@
+import { blockStyle } from "./block.css";
+
 export function Block() {
-  return <div>하이욤</div>;
+  return <div className={blockStyle}>하이욤</div>;
 }
