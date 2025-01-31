@@ -1,0 +1,31 @@
+{
+  "name": "@fc/react-components-layout",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "yarn clear && yarn build:js && yarn build:type",
+    "build:js": "node build.js",
+    "build:type": "tsc --emitDeclarationOnly",
+    "clear": "rimraf  dist"
+  },
+  "devDependencies": {
+    "@fc/esbuild-config": "workspace:^",
+    "@fc/themes": "workspace:^",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "peerDependencies": {
+    "@fc/themes": "workspace:^",
+    "react": "*"
+  }
+}
