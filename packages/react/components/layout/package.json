@@ -8,13 +8,15 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./style.css": "./dist/index.css"
   },
   "scripts": {
     "build": "yarn clear && yarn build:js && yarn build:type",
     "build:js": "node build.js",
     "build:type": "tsc --emitDeclarationOnly",
-    "clear": "rimraf  dist"
+    "clear": "rimraf  dist",
+    "dev": "yarn build:js --watch & yarn build:type --watch"
   },
   "devDependencies": {
     "@fc/esbuild-config": "workspace:^",

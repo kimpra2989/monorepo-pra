@@ -7,10 +7,14 @@
   ],
   "scripts": {
     "build": "nx build",
-    "graph": " nx run-many -t=build --graph"
+    "graph": "nx run-many -t=build --graph",
+    "dev:all": "yarn dev:storybook & yarn dev:packages",
+    "dev:storybook": "nx storybook @fc/storybook",
+    "dev:packages": "nx run-many --target=dev --projects='@fc/react-components-*'"
   },
   "packageManager": "yarn@4.6.0",
   "devDependencies": {
+    "@types/node": "^22.12.0",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "eslint": "^8.48.0",
