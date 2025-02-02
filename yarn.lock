@@ -487,6 +487,8 @@ __metadata:
     "@types/react-dom": "npm:^19.0.3"
     "@vanilla-extract/css": "npm:^1.17.1"
     "@vanilla-extract/esbuild-plugin": "npm:^2.3.14"
+    "@vanilla-extract/sprinkles": "npm:^1.6.3"
+    clsx: "npm:^2.1.1"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
   peerDependencies:
@@ -504,7 +506,6 @@ __metadata:
     "@storybook/addon-essentials": "npm:^8.5.2"
     "@storybook/addon-interactions": "npm:^8.5.2"
     "@storybook/addon-links": "npm:^8.5.2"
-    "@storybook/addon-onboarding": "npm:^8.5.2"
     "@storybook/blocks": "npm:^8.5.2"
     "@storybook/react": "npm:^8.5.2"
     "@storybook/react-vite": "npm:^8.5.2"
@@ -1086,15 +1087,6 @@ __metadata:
   peerDependencies:
     storybook: ^8.5.2
   checksum: 10c0/b59e5f92699a13150306ba84d9a5155488e5a62e156135e5c8444f47ce4aa3bb95a13250a28ce5a42a388225ad006b8e42b77938c7914faa7b3db3b721bd7b2b
-  languageName: node
-  linkType: hard
-
-"@storybook/addon-onboarding@npm:^8.5.2":
-  version: 8.5.2
-  resolution: "@storybook/addon-onboarding@npm:8.5.2"
-  peerDependencies:
-    storybook: ^8.5.2
-  checksum: 10c0/1fba13233483f6b5b6115dac98a73a26b3a4ec7bd1f13764c837608067845da5d5e26b9a73f6430dbae559cefb1379f768e24a8384c0d2cbb3ad35ce21cf7567
   languageName: node
   linkType: hard
 
@@ -1872,6 +1864,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vanilla-extract/sprinkles@npm:^1.6.3":
+  version: 1.6.3
+  resolution: "@vanilla-extract/sprinkles@npm:1.6.3"
+  peerDependencies:
+    "@vanilla-extract/css": ^1.0.0
+  checksum: 10c0/17e03af9d090aa175bdeae646ae4a5bf1da37b7e473caa4ab92efbbd7678e53137e10281a0669f50ab5bd985a59e621da2bfc3e0cc28bded32becd72b8cfaf13
+  languageName: node
+  linkType: hard
+
 "@vitest/expect@npm:2.0.5":
   version: 2.0.5
   resolution: "@vitest/expect@npm:2.0.5"
@@ -2517,6 +2518,13 @@ __metadata:
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
   checksum: 10c0/2176952b3649293473999a95d7bebfc9dc96410f6cbd3d2595cf12fd401f63a4bf41a7adbfd3ab2ff09ed60cb9870c58c6acdd18b87767366fabfc163700f13b
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10c0/c4c8eb865f8c82baab07e71bfa8897c73454881c4f99d6bc81585aecd7c441746c1399d08363dc096c550cceaf97bd4ce1e8854e1771e9998d9f94c4fe075839
   languageName: node
   linkType: hard
 

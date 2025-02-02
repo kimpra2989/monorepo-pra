@@ -1,4 +1,5 @@
 import { ElementType } from "react";
-import { AsElementProps } from "../core/types";
+import { AsElementProps, StyleProps } from "../core/types";
 
-export type BoxProps<TagName extends ElementType> = AsElementProps<TagName>;
+export type BoxProps<TagName extends ElementType> = AsElementProps<TagName> &
+  StyleProps;
