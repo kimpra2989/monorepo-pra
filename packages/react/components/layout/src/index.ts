@@ -1,2 +1,2 @@
-export { Box, type BoxProps } from "./layout";
+export * from "./layout";
 export * from "./typography";

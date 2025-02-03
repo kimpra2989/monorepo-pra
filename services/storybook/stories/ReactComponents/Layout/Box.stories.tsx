@@ -1,19 +1,23 @@
-import "@fc/react-components-layout/style.css";
 import { Box } from "@fc/react-components-layout";
+import "@fc/react-components-layout/style.css";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
   title: "React Components/Layout/Box",
   component: Box,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-};
+} satisfies Meta<typeof Box>;
 
-export const BoxStory = {
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
   args: {
     as: "button",
-    padding: '5',
-    background: 'blue',
+    padding: "5",
+    background: "blue",
   },
 };

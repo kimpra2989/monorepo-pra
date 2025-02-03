@@ -12,8 +12,8 @@ export type AsElementProps<TagName extends ElementType> = AsProps<TagName> &
   ElementProps<TagName>;
 
 export type ColorProps = {
-  color: keyof typeof vars.colors.$scale & string;
-  background: keyof typeof vars.colors.$scale & string;
+  color?: keyof typeof vars.colors.$scale & string;
+  background?: keyof typeof vars.colors.$scale & string;
 };
 
 export type StyleProps = StyleSprinkles & ColorProps;

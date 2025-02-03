@@ -1,11 +1,11 @@
 import { vars } from "@fc/themes";
 import { clsx } from "clsx";
 import { ElementType } from "react";
-import { styleSprinkles } from "../core/sprinkles.css";
+import { styleSprinkles } from "../../core/sprinkles.css";
+import { extractSprinkleProps } from "../../utils/sprinklesProperties";
 import { BoxProps } from "./types";
-import { extractSprinkleProps } from "../utils/sprinklesProperties";
 
-export const Box = <T extends ElementType = "div">({
+const Box = <T extends ElementType = "div">({
   as,
   children,
   ref,
@@ -33,3 +33,5 @@ export const Box = <T extends ElementType = "div">({
     </Component>
   );
 };
+
+export default Box;
