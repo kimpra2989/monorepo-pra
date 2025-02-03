@@ -2,24 +2,26 @@ import { vars } from "@fc/themes";
 import { clsx } from "clsx";
 import { ElementType } from "react";
 import { styleSprinkles } from "../core/sprinkles.css";
-import { BoxProps } from "./types";
 import { extractSprinkleProps } from "../utils/sprinklesProperties";
+import { TextProps } from "./types";
+import { textStyle } from "./style.css";
 
-export const Box = <T extends ElementType = "div">({
+const Text = <T extends ElementType = "p">({
   as,
   children,
   ref,
   ...props
-}: BoxProps<T>) => {
-  const Component = as || "div";
+}: TextProps<T>) => {
+  const Component = as || "p";
 
-  const { className, color, background } = props;
+  const { className, color = "gray", background, fontSize } = props;
 
   return (
     <Component
       ref={ref}
       className={clsx([
         styleSprinkles(extractSprinkleProps(props, styleSprinkles.properties)),
+        textStyle({ fontSize }),
         className,
       ])}
       style={{
@@ -33,3 +35,5 @@ export const Box = <T extends ElementType = "div">({
     </Component>
   );
 };
+
+export default Text;
