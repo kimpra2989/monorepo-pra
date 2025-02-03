@@ -10,3 +10,9 @@ export type TextProps<TagName extends ElementType> = AsElementProps<TagName> &
     casing?: CSSProperties["textTransform"];
     decoration?: CSSProperties["textDecoration"];
   };
+
+export type HeadingProps<TagName extends ElementType> =
+  AsElementProps<TagName> &
+    StyleProps & {
+      fontSize: keyof typeof classes.typography.text;
+    };
