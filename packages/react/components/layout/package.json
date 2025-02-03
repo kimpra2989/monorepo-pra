@@ -16,7 +16,7 @@
     "build:js": "node build.js",
     "build:type": "tsc --emitDeclarationOnly",
     "clear": "rimraf  dist",
-    "dev": "yarn build:js --watch & yarn build:type --watch"
+    "dev": "yarn build:js --dev --watch & yarn build:type --watch "
   },
   "devDependencies": {
     "@fc/esbuild-config": "workspace:^",
