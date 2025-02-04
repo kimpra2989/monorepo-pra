@@ -14,15 +14,11 @@ const Divider = ({ children, ref, ...props }: DividerProps) => {
   const borderStyle =
     orientation === "horizontal"
       ? {
-          border: 0,
-          borderLeft: 0,
           width: "100%",
           height: 0,
           borderBottom: border,
         }
       : {
-          border: 0,
-          borderBottom: 0,
           width: 0,
           height: "100%",
           borderLeft: border,

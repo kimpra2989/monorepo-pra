@@ -28,11 +28,11 @@ const meta = {
     },
     orientation: {
       options: ["horizontal", "vertical"],
-      control: "select",
+      control: "radio",
     },
     variant: {
       options: ["solid", "dashed"],
-      control: "select",
+      control: "radio",
     },
     color: {
       options: Object.keys(vars.colors.$scale),
