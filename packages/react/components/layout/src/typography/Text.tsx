@@ -25,8 +25,8 @@ const Text = <T extends ElementType = "p">({
         className,
       ])}
       style={{
-        color: vars.colors.$scale?.[color]?.[700] ?? color,
-        background: vars.colors.$scale[background]?.[100] ?? background,
+        color: vars.colors.$scale?.[color]?.[700],
+        background: vars.colors.$scale[background]?.[100],
         ...props.style,
       }}
       {...props}

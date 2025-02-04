@@ -9,7 +9,7 @@ const Divider = ({ children, ref, ...props }: DividerProps) => {
     orientation = "horizontal",
   } = props;
 
-  const border = `${size}px ${variant} ${vars.colors.$scale?.[color]?.[200] ?? color}`;
+  const border = `${size}px ${variant} ${vars.colors.$scale?.[color]?.[200]}`;
 
   const borderStyle =
     orientation === "horizontal"
